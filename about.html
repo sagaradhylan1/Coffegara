@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tentang Kami - Coffee GyRess</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <a href="index.html" class="logo"
+        >coffee <i class="fas fa-mug-hot"></i
+      ></a>
+
+      <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="about.html" class="active">about</a>
+         <a href="#" onclick="return cekLogin()">Menu</a>
+        <a href="index.html#review">review</a>
+      </nav>
+    </header>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+      <h1 class="heading">Tentang <span>Coffee GyRess</span></h1>
+      <div class="row">
+        <div class="image">
+          <img src="image/about-img.png" alt="Tentang Coffee GyRess" />
+        </div>
+        <div class="content">
+          <h3>Lebih dari sekadar kopi...</h3>
+          <p>
+            Coffee GyRess hadir dari cinta terhadap kopi dan keinginan untuk
+            menciptakan ruang di mana siapa pun dapat bersantai, bekerja, atau
+            mengobrol dengan nyaman.
+          </p>
+          <p>
+            Kami hanya menggunakan biji kopi berkualitas tinggi yang disangrai
+            secara lokal untuk menjaga rasa dan aroma terbaik. Setiap minuman
+            disajikan dengan hati oleh barista profesional kami.
+          </p>
+          <p>
+            Dari suasana yang hangat dan estetis hingga playlist musik yang
+            menenangkan, setiap elemen di Coffee GyRess dirancang untuk memberi
+            Anda pengalaman yang berkesan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ULASAN SECTION -->
+    <section class="review" id="review">
+      <h1 class="heading">Apa Kata <span>Pelanggan</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            Suasana tempatnya cozy banget, cocok buat nugas atau santai sore.
+            Kopinya juga mantap!
+          </p>
+          <img src="image/pic-1.png" alt="" />
+          <h3>Andi Putra</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i
+            ><i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            Baristanya ramah dan bisa custom pesanan. Tempatnya bersih dan
+            nyaman.
+          </p>
+          <img src="image/pic-2.png" alt="" />
+          <h3>Sari Widya</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-quote-left"></i>
+          <p>
+            Latte-nya creamy dan perfect banget! Jadi langganan setiap weekend.
+          </p>
+          <img src="image/pic-3.png" alt="" />
+          <h3>Raka Saputra</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i
+            ><i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer" style="background-color: #f7f1e3; color: #3e2f24; padding: 2rem 1rem; font-family: 'Segoe UI', sans-serif;">
+  <div class="box-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; max-width: 1100px; margin: auto;">
+
+    <!-- Quick Links -->
+    <div class="box" style="flex: 1 1 250px; min-width: 250px;">
+      <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #5c3d2e;">Quick Links</h3>
+      <a href="#home" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fas fa-arrow-right" style="margin-right: 8px;"></i> Home
+      </a>
+      <a href="#about" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fas fa-arrow-right" style="margin-right: 8px;"></i> About
+      </a>
+      <a href="#menu" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fas fa-arrow-right" style="margin-right: 8px;"></i> Menu
+      </a>
+      <a href="#review" style="display: block; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fas fa-arrow-right" style="margin-right: 8px;"></i> Review
+      </a>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="box" style="flex: 1 1 250px; min-width: 250px;">
+      <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #5c3d2e;">Contact Info</h3>
+      <a href="https://wa.me/6285931106769" target="_blank" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> +62 859-3110-6769
+      </a>
+      <a href="mailto:dilanparamaraja1@gmail.com" style="display: block; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fas fa-envelope" style="margin-right: 8px;"></i> dilanparamaraja1@gmail.com
+      </a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="box" style="flex: 1 1 250px; min-width: 250px;">
+      <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #5c3d2e;">Follow Us</h3>
+      <a href="#" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fab fa-facebook-f" style="margin-right: 8px;"></i> Facebook
+      </a>
+      <a href="#" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fab fa-instagram" style="margin-right: 8px;"></i> Instagram
+      </a>
+      <a href="https://wa.me/6287812249416" target="_blank" style="display: block; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Credit -->
+  <div class="credit" style="text-align: center; margin-top: 2rem; font-size: 1.2rem; color: #3e2f24;">
+    Created by <span style="color: #b06d3c; font-weight: bold;">Moch Sagara Dhylan</span> | All rights reserved
+  </div>
+</section>
+
+    <!-- Feather Init -->
+    <script>
+      feather.replace();
+
+        function cekLogin() {
+        const userEmail = localStorage.getItem("userEmail");
+
+        if (!userEmail) {
+          alert("Silakan login terlebih dahulu untuk mengakses menu.");
+          window.location.href = "login.html";
+        } else {
+          window.location.href = "menu.html";
+        }
+      }
+    </script>
+
+    <!-- Optional JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

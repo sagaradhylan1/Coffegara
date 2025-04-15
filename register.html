@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - Coffee Shop GyRess</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f3f3f3;
+    }
+
+    .register-container {
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .register-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .register-container input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .register-container .btn {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      background-color: #6f4e37;
+      color: white;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .register-container .btn:hover {
+      background-color: #5a3f2b;
+    }
+
+    .register-container p {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .register-container p a {
+      color: #6f4e37;
+      text-decoration: none;
+    }
+
+    .register-container p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-container">
+    <h2>Daftar Akun</h2>
+    <form id="registerForm">
+      <input type="email" id="regEmail" placeholder="Email" required>
+      <input type="password" id="regPassword" placeholder="Password (min. 6 karakter)" required>
+      <button type="submit" class="btn">Daftar</button>
+    </form>
+    <p>Sudah punya akun? <a href="login.html">Login di sini</a></p>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAFdZxpR7gwEryIuXMqI81o5K4g5plU9cs",
+      authDomain: "coffeshopgr.firebaseapp.com",
+      projectId: "coffeshopgr",
+      storageBucket: "coffeshopgr.appspot.com",
+      messagingSenderId: "725990170884",
+      appId: "1:725990170884:web:f56410ecc5d914a84ab051",
+      measurementId: "G-NYE45K98WJ"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+    const registerForm = document.getElementById('registerForm');
+
+    registerForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById('regEmail').value.trim();
+      const password = document.getElementById('regPassword').value;
+
+      if (password.length < 6) {
+        alert("Password minimal 6 karakter.");
+        return;
+      }
+
+      auth.createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          alert('Pendaftaran berhasil! Silakan login.');
+          window.location.href = 'login.html';
+        })
+        .catch((error) => {
+          alert('Gagal daftar: ' + error.message);
+        });
+    });
+  </script>
+
+</body>
+</html>

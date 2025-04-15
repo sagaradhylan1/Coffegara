@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee</title>
+
+    <!-- SWIPER -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- Font Awesome CDN Link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Custom CSS File Link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+      <a href="#" class="logo">coffee <i class="fas fa-mug-hot"></i></a>
+
+      <nav class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="#" onclick="return cekLogin()">Menu</a>
+        <a href="review.php">Review</a>
+      </nav>
+
+      <div class="navbar-extra">
+        <a href="dashboard-login.html" id="users"
+          ><i data-feather="users"></i
+        ></a>
+        <a href="#" id="log-out"><i data-feather="log-out"></i></a>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="home" id="home">
+      <div class="row">
+        <div class="content">
+          <h3>fresh coffee in the morning</h3>
+          <a href="#" class="btn">buy one now</a>
+        </div>
+
+        <div class="image">
+          <img src="image/home-img-1.png" class="main-home-image" alt="" />
+        </div>
+      </div>
+
+      <div class="image-slider">
+        <img src="image/home-img-1.png" alt="" />
+        <img src="image/home-img-2.png" alt="" />
+        <img src="image/home-img-3.png" alt="" />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <h1 class="heading">
+        about our coffee<span>because our coffee is the best</span>
+      </h1>
+
+      <div class="row">
+        <div class="image">
+          <img src="image/coffe.jpg" alt="" />
+        </div>
+
+        <div class="content">
+          <h3 class="title">What's make our coffee special!</h3>
+          <p>
+            Karena disetiap secangkir kopi, ada cerita. Ada kehangatan yang
+            menyatukan, aroma yang membangkitkan kenangan, dan rasa yang
+            menghadirkan kebahagiaan. Di Coffee Shop GyRess, kami percaya bahwa
+            kopi bukan sekadar minuman, tapi sebuah pengalaman.
+          </p>
+          <a href="#" class="btn">read more</a>
+          <div class="icons-container">
+            <div class="icons">
+              <img src="image/about-icon-1.png" alt="" />
+              <h3>Kualitas Kopi Kami</h3>
+            </div>
+            <div class="icons">
+              <img src="image/about-icon-2.png" alt="" />
+              <h3>Tempat Kopi Terbaik</h3>
+            </div>
+            <div class="icons">
+              <img src="image/about-icon-3.png" alt="" />
+              <h3>Pengiriman Cepat</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU Start-->
+    <section class="menu" id="menu">
+      <h1 class="heading">our menu <span>popular menu</span></h1>
+
+      <div class="box-container">
+        <a href="#" class="box">
+          <img src="image/menu-1.png" alt="" />
+          <div class="content">
+            <h3>Flat White</h3>
+            <p></p>
+            <span>Rp25.000</span>
+          </div>
+        </a>
+
+        <a href="#" class="box">
+          <img src="image/menu-2.png" alt="" />
+          <div class="content">
+            <h3>Cafe Latte</h3>
+            <p>Satu shot espresso dengan susu steam dan busa</p>
+            <span>Rp.30.000</span>
+          </div>
+        </a>
+
+        <a href="#" class="box">
+          <img src="image/menu-3.png" alt="" />
+          <div class="content">
+            <h3>Mocha</h3>
+            <p>Kombinasi espresso dengan susu dan coklat</p>
+            <span>Rp20.000</span>
+          </div>
+        </a>
+
+        <a href="#" class="box">
+          <img src="image/menu-4.png" alt="" />
+          <div class="content">
+            <h3>our special coffee</h3>
+            <p>Macchiato</p>
+            <span>Rp25.000</span>
+          </div>
+        </a>
+
+        <a href="#" class="box">
+          <img src="image/menu-5.png" alt="" />
+          <div class="content">
+            <h3>Affogato</h3>
+            <p>Satu shot espresso dengan sedikit susu, dan tidak berbusa.</p>
+            <span>Rp26.000</span>
+          </div>
+        </a>
+
+        <a href="#" class="box">
+          <img src="image/menu-6.png" alt="" />
+          <div class="content">
+            <h3>Cafe Au Lait</h3>
+            <p>seduhan kopi atau espresso dengan susu yang telah di-steam</p>
+            <span>Rp18.000</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- BOOK -->
+    <section class="book" id="book">
+      <h1 class="heading">Kritik dan Masukan<span>Tentang Coffe Kami</span></h1>
+
+      <form id="reviewForm">
+        <input type="text" placeholder="Name" class="box" required />
+        <input type="text" placeholder="Kritik" class="box" />
+        <textarea
+          placeholder="Masukan"
+          class="box"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+        <input type="submit" value="send message" class="btn" />
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <section
+      class="footer"
+      style="
+        background-color: #f7f1e3;
+        color: #3e2f24;
+        padding: 2rem 1rem;
+        font-family: 'Segoe UI', sans-serif;
+      "
+    >
+      <div
+        class="box-container"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 1.5rem;
+          max-width: 1100px;
+          margin: auto;
+        "
+      >
+        <!-- Quick Links -->
+        <div class="box" style="flex: 1 1 250px; min-width: 250px">
+          <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #5c3d2e">
+            Quick Links
+          </h3>
+          <a
+            href="#home"
+            style="
+              display: block;
+              margin-bottom: 0.8rem;
+              font-size: 1.3rem;
+              color: #3e2f24;
+            "
+          >
+            <i class="fas fa-arrow-right" style="margin-right: 8px"></i> Home
+          </a>
+          <a
+            href="#about"
+            style="
+              display: block;
+              margin-bottom: 0.8rem;
+              font-size: 1.3rem;
+              color: #3e2f24;
+            "
+          >
+            <i class="fas fa-arrow-right" style="margin-right: 8px"></i> About
+          </a>
+          <a
+            href="#menu"
+            style="
+              display: block;
+              margin-bottom: 0.8rem;
+              font-size: 1.3rem;
+              color: #3e2f24;
+            "
+          >
+            <i class="fas fa-arrow-right" style="margin-right: 8px"></i> Menu
+          </a>
+          <a
+            href="#review"
+            style="display: block; font-size: 1.3rem; color: #3e2f24"
+          >
+            <i class="fas fa-arrow-right" style="margin-right: 8px"></i> Review
+          </a>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="box" style="flex: 1 1 250px; min-width: 250px">
+          <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #5c3d2e">
+            Contact Info
+          </h3>
+          <a
+            href="https://wa.me/6285931106769"
+            target="_blank"
+            style="
+              display: block;
+              margin-bottom: 0.8rem;
+              font-size: 1.3rem;
+              color: #3e2f24;
+            "
+          >
+            <i class="fab fa-whatsapp" style="margin-right: 8px"></i> +62
+            859-3110-6769
+          </a>
+          <a
+            href="mailto:dilanparamaraja1@gmail.com"
+            style="display: block; font-size: 1.3rem; color: #3e2f24"
+          >
+            <i class="fas fa-envelope" style="margin-right: 8px"></i>
+            dilanparamaraja1@gmail.com
+          </a>
+        </div>
+
+        <!-- Social Media -->
+        <div class="box" style="flex: 1 1 250px; min-width: 250px">
+          <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #5c3d2e">
+            Follow Us
+          </h3>
+          <a
+            href="https://www.facebook.com/share/1AEjA9PZ8a/"
+            style="
+              display: block;
+              margin-bottom: 0.8rem;
+              font-size: 1.3rem;
+              color: #3e2f24;
+            "
+          >
+            <i class="fab fa-facebook-f" style="margin-right: 8px"></i> Facebook
+          </a>
+          <a
+            href="https://www.instagram.com/sgrdhylan?igsh=MWdudWd6ZWprZGR6OQ=="
+            style="
+              display: block;
+              margin-bottom: 0.8rem;
+              font-size: 1.3rem;
+              color: #3e2f24;
+            "
+          >
+            <i class="fab fa-instagram" style="margin-right: 8px"></i> Instagram
+          </a>
+          <a
+            href="https://wa.me/6287812249416"
+            target="_blank"
+            style="display: block; font-size: 1.3rem; color: #3e2f24"
+          >
+            <i class="fab fa-whatsapp" style="margin-right: 8px"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Credit -->
+      <div
+        class="credit"
+        style="
+          text-align: center;
+          margin-top: 2rem;
+          font-size: 1.2rem;
+          color: #3e2f24;
+        "
+      >
+        Created by
+        <span style="color: #b06d3c; font-weight: bold"
+          >Moch Sagara Dhylan</span
+        >
+        | All rights reserved
+      </div>
+    </section>
+
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Feather Icons Script -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- Custom JS File Link  -->
+    <script src="js/script.js"></script>
+
+    <!-- FIREBASE SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+    <script>
+      // Ganti dengan config Firebase milikmu
+      const firebaseConfig = {
+        apiKey: "AIzaSyAFdZxpR7gwEryIuXMqI81o5K4g5plU9cs",
+        authDomain: "coffeshopgr.firebaseapp.com",
+        databaseURL: "https://coffeshopgr-default-rtdb.firebaseio.com",
+        projectId: "coffeshopgr",
+        storageBucket: "coffeshopgr.appspot.com",
+        messagingSenderId: "725990170884",
+        appId: "1:725990170884:web:f56410ecc5d914a84ab051",
+        measurementId: "G-NYE45K98WJ",
+      };
+
+      // Inisialisasi Firebase
+      firebase.initializeApp(firebaseConfig);
+      const database = firebase.database();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("reviewForm");
+
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const inputs = form.querySelectorAll(".box");
+            const name = inputs[0]?.value.trim();
+            const kritik = inputs[1]?.value.trim();
+            const message = inputs[2]?.value.trim();
+
+            if (name && message) {
+              firebase
+                .database()
+                .ref("reviews")
+                .push({
+                  name,
+                  kritik,
+                  message,
+                  timestamp: Date.now(),
+                })
+                .then(() => {
+                  alert("Ulasan berhasil dikirim!");
+                  form.reset();
+                })
+                .catch((error) => {
+                  alert("Gagal mengirim ulasan: " + error.message);
+                });
+            } else {
+              alert("Mohon lengkapi semua data yang wajib diisi.");
+            }
+          });
+        } else {
+          console.error("Form review tidak ditemukan.");
+        }
+      });
+
+      //ceklogin
+      function cekLogin() {
+        const userEmail = localStorage.getItem("userEmail");
+
+        if (!userEmail) {
+          alert("Silakan login terlebih dahulu untuk mengakses menu.");
+          window.location.href = "login.html";
+        } else {
+          window.location.href = "menu.html";
+        }
+      }
+
+      // Logout Function
+      document
+        .getElementById("log-out")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const confirmLogout = confirm("Apakah Anda yakin ingin logout?");
+          if (confirmLogout) {
+            // Hapus data login dari localStorage
+            localStorage.removeItem("userEmail");
+            localStorage.removeItem("isLoggedIn");
+
+            alert("Anda berhasil logout.");
+            window.location.href = "login.html";
+          }
+        });
+    </script>
+    <script>
+      const userEmail = localStorage.getItem("userEmail");
+      if (userEmail) {
+        document.getElementById("welcome-user").textContent = `Hi, ${
+          userEmail.split("@")[0]
+        }`;
+
+        // Optional: Sembunyikan icon user kalau sudah tampil nama
+        const userIcon = document.getElementById("user-icon");
+        if (userIcon) {
+          userIcon.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

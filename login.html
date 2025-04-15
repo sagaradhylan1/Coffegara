@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Pelanggan - Coffee Shop GyRess</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(to right, #e6ccb2, #fbe8d3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .login-container {
+        background: #fff;
+        padding: 2.5rem 3rem;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        max-width: 450px;
+        text-align: center;
+      }
+
+      .login-container h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: #6f4e37;
+      }
+
+      .login-container input {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1.2rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+
+      .login-container .btn {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        background-color: #6f4e37;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .login-container .btn:hover {
+        background-color: #5a3f2b;
+      }
+
+      .login-container .register-link {
+        margin-top: 1.2rem;
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .login-container .register-link a {
+        color: #6f4e37;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .login-container .register-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login Pelanggan</h2>
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Masukkan Email" required />
+        <input
+          type="password"
+          id="password"
+          placeholder="Masukkan Password"
+          required
+        />
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <div class="register-link">
+        Belum punya akun? <a href="register.html">Daftar di sini</a>
+      </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+    <script>
+      // Konfigurasi Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyAFdZxpR7gwEryIuXMqI81o5K4g5plU9cs",
+        authDomain: "coffeshopgr.firebaseapp.com",
+        projectId: "coffeshopgr",
+        storageBucket: "coffeshopgr.appspot.com",
+        messagingSenderId: "725990170884",
+        appId: "1:725990170884:web:f56410ecc5d914a84ab051",
+        measurementId: "G-NYE45K98WJ",
+      };
+
+      // Inisialisasi Firebase
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+
+      // Menangani Form Login
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value;
+
+          localStorage.setItem("userEmail", email);
+
+          auth
+            .signInWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+              alert("Login berhasil!");
+              window.location.href = "menu.html"; // Ubah jika perlu
+            })
+            .catch((error) => {
+              alert("Login gagal: " + error.message);
+            });
+        });
+    </script>
+  </body>
+</html>

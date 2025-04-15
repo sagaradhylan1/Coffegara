@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Coffee GyRess</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <a href="index.php" class="logo">coffee <i class="fas fa-mug-hot"></i></a>
+
+    <nav class="navbar">
+      <a href="index.html">home</a>
+      <a href="about.html">about</a>
+      <a href="#">menu</a>
+      <a href="review.php">review</a>
+    </nav>
+  </header>
+
+  <!-- MENU SECTION -->
+  <section class="menu" id="menu">
+    <h1 class="heading">Menu <span>Spesial</span></h1>
+
+    <div class="box-container">
+
+      <div class="box">
+        <img src="image/menu-1.png" alt="Flat White">
+        <h3>Flat White</h3>
+        <div class="price">Rp25.000</div>
+        <button class="btn" onclick="orderMenu('Flat White', 25000)">Pesan Sekarang</button>
+      </div>
+
+      <div class="box">
+        <img src="image/menu-2.png" alt="Espresso">
+        <h3>Espresso</h3>
+        <div class="price">Rp18.000</div>
+        <button class="btn" onclick="orderMenu('Espresso', 18000)">Pesan Sekarang</button>
+      </div>
+
+      <div class="box">
+        <img src="image/menu-3.png" alt="Americano">
+        <h3>Americano</h3>
+        <div class="price">Rp20.000</div>
+        <button class="btn" onclick="orderMenu('Americano', 20000)">Pesan Sekarang</button>
+      </div>
+
+      <div class="box">
+        <img src="image/menu-4.png" alt="Latte">
+        <h3>Latte</h3>
+        <div class="price">Rp25.000</div>
+        <button class="btn" onclick="orderMenu('Latte', 25000)">Pesan Sekarang</button>
+      </div>
+
+      <div class="box">
+        <img src="image/menu-5.png" alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <div class="price">Rp24.000</div>
+        <button class="btn" onclick="orderMenu('Cappuccino', 24000)">Pesan Sekarang</button>
+      </div>
+
+      <div class="box">
+        <img src="image/menu-6.png" alt="Mocha">
+        <h3>Mocha</h3>
+        <div class="price">Rp26.000</div>
+        <button class="btn" onclick="orderMenu('Mocha', 26000)">Pesan Sekarang</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer" style="background-color: #f7f1e3; color: #3e2f24; padding: 2rem 1rem; font-family: 'Segoe UI', sans-serif;">
+  <div class="box-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; max-width: 1100px; margin: auto;">
+
+    <!-- Quick Links -->
+    <div class="box" style="flex: 1 1 250px; min-width: 250px;">
+      <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #5c3d2e;">Quick Links</h3>
+      <a href="#home" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fas fa-arrow-right" style="margin-right: 8px;"></i> Home
+      </a>
+      <a href="#about" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fas fa-arrow-right" style="margin-right: 8px;"></i> About
+      </a>
+      <a href="#menu" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fas fa-arrow-right" style="margin-right: 8px;"></i> Menu
+      </a>
+      <a href="#review" style="display: block; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fas fa-arrow-right" style="margin-right: 8px;"></i> Review
+      </a>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="box" style="flex: 1 1 250px; min-width: 250px;">
+      <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #5c3d2e;">Contact Info</h3>
+      <a href="https://wa.me/6285931106769" target="_blank" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> +62 859-3110-6769
+      </a>
+      <a href="mailto:dilanparamaraja1@gmail.com" style="display: block; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fas fa-envelope" style="margin-right: 8px;"></i> dilanparamaraja1@gmail.com
+      </a>
+    </div>
+
+    <!-- Social Media -->
+    <div class="box" style="flex: 1 1 250px; min-width: 250px;">
+     <h3 style="font-size: 1.8rem; margin-bottom: 1rem; color: #5c3d2e;">Follow Us</h3>
+      <a href="https://www.facebook.com/share/1AEjA9PZ8a/" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fab fa-facebook-f" style="margin-right: 8px;"></i> Facebook
+      </a>
+      <a href="https://www.instagram.com/sgrdhylan?igsh=MWdudWd6ZWprZGR6OQ==" style="display: block; margin-bottom: 0.8rem; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fab fa-instagram" style="margin-right: 8px;"></i> Instagram
+      </a>
+      <a href="https://wa.me/6287812249416" target="_blank" style="display: block; font-size: 1.3rem; color: #3e2f24;">
+        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Credit -->
+  <div class="credit" style="text-align: center; margin-top: 2rem; font-size: 1.2rem; color: #3e2f24;">
+    Created by <span style="color: #b06d3c; font-weight: bold;">Moch Sagara Dhylan</span> | All rights reserved
+  </div>
+</section>
+
+  <!-- Feather Icons Init -->
+  <script>
+    feather.replace()
+  </script>
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+
+  <!-- Order Function -->
+  <script>
+    function orderMenu(nama, harga) {
+      localStorage.setItem('menuNama', nama);
+      localStorage.setItem('menuHarga', harga);
+      localStorage.setItem('menuJumlah', 1); // default jumlah
+      window.location.href = 'order.php';
+    }
+  </script>
+
+</body>
+</html>
